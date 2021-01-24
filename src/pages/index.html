@@ -1,0 +1,130 @@
+{% set title = "Denim" %} {% set description = "Lightning denim site example" %}
+{% extends "layout.html" %} 
+    {% block header %}
+    <header class="header">
+        <a class="logo" href="./index.html">
+            Nimes
+        </a>
+        <div class="menu">
+            <ul class="catalog">
+                <li class="catalog__unit"><a class="catalog__link" href="./woman.html">Woman</a></li>
+                <li class="catalog__unit"><a class="catalog__link" href="./woman.html">Man</a></li>
+                <li class="catalog__unit"><a class="catalog__link" href="./woman.html">New</a></li>
+            </ul>
+            <ul class="purchases">
+                <li class="purchases__unit"><a class="purchases__link" href="#">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M19 19L14.65 14.65M17 9C17 13.4183 13.4183 17 9 17C4.58172 17 1 13.4183 1 9C1 4.58172 4.58172 1 9 1C13.4183 1 17 4.58172 17 9Z" stroke="#151C22" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </a></li>
+                <li class="purchases__unit"><a class="purchases__link" href="#">
+                    <svg width="22" height="20" viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 1H4.63636L7.07273 12.4771C7.15586 12.8718 7.38355 13.2263 7.71595 13.4785C8.04835 13.7308 8.46427 13.8649 8.89091 13.8571H17.7273C18.1539 13.8649 18.5698 13.7308 18.9022 13.4785C19.2346 13.2263 19.4623 12.8718 19.5455 12.4771L21 5.28571H5.54545M9.18182 18.1429C9.18182 18.6162 8.7748 19 8.27273 19C7.77065 19 7.36364 18.6162 7.36364 18.1429C7.36364 17.6695 7.77065 17.2857 8.27273 17.2857C8.7748 17.2857 9.18182 17.6695 9.18182 18.1429ZM19.1818 18.1429C19.1818 18.6162 18.7748 19 18.2727 19C17.7707 19 17.3636 18.6162 17.3636 18.1429C17.3636 17.6695 17.7707 17.2857 18.2727 17.2857C18.7748 17.2857 19.1818 17.6695 19.1818 18.1429Z" stroke="#151C22" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </a></li>
+            </ul>
+        </div>
+        <div class="main">
+            <div class="title">
+                <p class="title__caption">The quality you deserve</p>
+                <h1 class="title__name">DENIM</h1>
+                <a href="./jackets.html" class="title__button">Check new collection</a>
+            </div>
+            <div class="girl">
+                <img src="./img/header-girl.jpg" alt="oh very nice girl" class="girl__image">
+            </div>
+        </div>
+        <div class="contacts">
+            <a href="#main" class="contacts__arrow">
+                <svg width="12" height="29" viewBox="0 0 12 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6 0V17V27M6 27L11 21M6 27L1 21" stroke="#151C22" stroke-width="2"/>
+                </svg>  
+            </a>
+            <ul class="social-media">
+                <li class="social-media__unit"><a class="social-media__link" href="https://www.facebook.com/">Facebook</a></li>
+                <li class="social-media__unit"><a class="social-media__link" href="https://www.instagram.com/">Instagram</a></li>
+            </ul>
+        </div>
+    </header>
+    {% endblock %}
+    {% block content %}
+    <main id="main">
+        <div class="bestsellers">
+            <div class="bestsellers-title">
+                <h2 class="bestsellers-title__name">Bestsellers</h2>
+                <a href="./jackets.html" class="bestsellers-title__button">
+                    View all
+                </a>
+            </div>
+            <div class="bestsellers-variants">
+                <a href="./overalls.html" class="bestsellers-variants-unit">
+                    <img src="./img/bestsellers1.jpg" alt="jacket" class="bestsellers-variants-unit__image">
+                    <p class="bestsellers-variants-unit__name">Jacket</p>
+                    <p class="bestsellers-variants-unit__price">$ 120</p>
+                </a>
+                <a href="./overalls.html" class="bestsellers-variants-unit">
+                    <img src="./img/bestsellers2.jpg" alt="overalls" class="bestsellers-variants-unit__image">
+                    <p class="bestsellers-variants-unit__name">Overalls</p>
+                    <p class="bestsellers-variants-unit__price">$ 140</p>
+                </a>
+                <a href="./overalls.html" class="bestsellers-variants-unit">
+                    <img src="./img/bestsellers3.jpg" alt="jacket" class="bestsellers-variants-unit__image">
+                    <p class="bestsellers-variants-unit__name">Jacket</p>
+                    <p class="bestsellers-variants-unit__price">$ 90</p>
+                </a>
+                <a href="./overalls.html" class="bestsellers-variants-unit">
+                    <img src="./img/bestsellers4.jpg" alt="overalls" class="bestsellers-variants-unit__image">
+                    <p class="bestsellers-variants-unit__name">Overalls</p>
+                    <p class="bestsellers-variants-unit__price">$ 160</p>
+                </a>
+            </div>
+            <a href="./jackets.html" class="bestsellers-add__button">
+                View all
+            </a>
+        </div>
+        <div class="banner">
+            <div class="banner-image">
+                <img class="banner-image__img" src="./img/banner-left.jpg" alt="девушка и парень в джинсе">
+            </div>
+            <div class="banner-main">
+                <div class="banner-main__container">
+                    <p class="banner-main__caption">Street fashion collection</p>
+                    <h2 class="banner-main__name">Fall 2019</h2>
+                    <a href="#" class="banner-main__button">Shop now</a>
+                </div>
+            </div>
+        </div>
+        <div class="bestsellers">
+            <div class="bestsellers-title">
+                <h2 class="bestsellers-title__name">Shop by category</h2>
+                <a href="./jackets.html" class="bestsellers-title__button">
+                    View all
+                    <div class="bestsellers-title__button_line"></div>
+                </a>
+            </div>
+            <div class="bestsellers-variants">
+                <a href="./overalls.html" class="bestsellers-variants-unit">
+                    <img src="./img/category1.jpg" alt="jacket" class="bestsellers-variants-unit__image">
+                    <p class="bestsellers-variants-unit__name">Jeans</p>
+                </a>
+                <a href="./overalls.html" class="bestsellers-variants-unit">
+                    <img src="./img/category2.jpg" alt="overalls" class="bestsellers-variants-unit__image">
+                    <p class="bestsellers-variants-unit__name">Shirts</p>
+                </a>
+                <a href="./overalls.html" class="bestsellers-variants-unit">
+                    <img src="./img/category3.jpg" alt="jacket" class="bestsellers-variants-unit__image">
+                    <p class="bestsellers-variants-unit__name">Jacket</p>
+                </a>
+                <a href="./overalls.html" class="bestsellers-variants-unit">
+                    <img src="./img/category4.jpg" alt="overalls" class="bestsellers-variants-unit__image">
+                    <p class="bestsellers-variants-unit__name">Overalls</p>
+                </a>
+            </div>
+            <div class="bestsellers-add">
+                <a href="./jackets.html" class="bestsellers-add__button">
+                    View all
+                </a>
+            </div>
+        </div>
+    </main>
+    {% endblock %}

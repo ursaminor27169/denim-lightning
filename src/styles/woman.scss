@@ -1,0 +1,92 @@
+$main-procent: 7%;
+
+@mixin container($procent) {
+    margin: 0 $procent;
+}
+
+@mixin font-styles($weight, $size) {
+    font-weight: $weight;
+    font-size: $size;
+}
+
+$colors: (
+    background-lightgray: #F1F2F4,
+    text-gray: #727A82,    
+    text-black: #151C22,
+    line-gray: #E5E5E5
+);
+
+.woman-header {
+    background-color: map-get($colors, background-lightgray);
+    .logo {
+        background-color: white;
+        width: 100%;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @include font-styles(800, 24px);
+    }
+}
+.woman-main {
+    background-color: map-get($map: $colors, $key: background-lightgray);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    .bread-crumb {
+        margin-top: 15px;
+        display: flex;
+        flex-direction: row;
+        &__unit {
+            margin-right: 10px;
+            @include font-styles(500, 18px);
+            color: map-get($map: $colors, $key: text-gray);
+            &:hover .bread-crumb__link::after {
+                width: 100%;
+                transition-duration: 0.3s;
+            }
+        }
+        &__link {
+            color: map-get($map: $colors, $key: text-gray);
+            position: relative;
+            &::after {
+                content: '';
+                background-color: map-get($map: $colors, $key: text-gray);
+                width: 0%;
+                height: 2px;
+                position: absolute;
+                top: 23px;
+                left: 0;
+            }
+            &_active {
+                color: map-get($map: $colors, $key: text-black);
+                &::after {
+                    display: none;
+                }
+            }
+        }
+    }
+    .main__name {
+        text-align: center;
+        margin-top: 150px;
+        margin-bottom: 200px;
+        &:hover .main__name_link::after {
+            width: 100%;
+            transition-duration: 0.3s;
+        }
+        &_link {
+            @include font-styles(500, 26px);
+            position: relative;
+            &::after {
+                content: '';
+                background-color: map-get($map: $colors, $key: text-black);
+                width: 0%;
+                height: 2px;
+                position: absolute;
+                top: 27px;
+                left: 0;
+            }
+        }
+    }
+}

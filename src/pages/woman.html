@@ -1,0 +1,23 @@
+{% set title = "Denim - Woman" %} {% set description = "Lightning denim site example" %}
+{% extends "layout.html" %} 
+    {% block header %}
+    <header class="woman-header">
+        <a class="logo" href="./index.html">
+            Nimes
+        </a>
+    </header>
+    {% endblock %}
+    {% block content %}
+    <main class="woman-main">
+        <ul class="bread-crumb">
+            <li class="bread-crumb__unit bread-crumb__unit_delete"><a href="./index.html" class="bread-crumb__link">All categories</a></li>
+            <li class="bread-crumb__unit bread-crumb__unit_delete">/</li>
+            <li class="bread-crumb__unit"><a href="#" class="bread-crumb__link bread-crumb__link_active">Woman</a></li>
+        </ul>
+        <p class="main__name">
+            <a class="main__name_link" href="./jackets.html">
+                Jackets
+            </a>
+        </p>
+    </main>
+    {% endblock %}

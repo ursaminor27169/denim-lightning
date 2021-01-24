@@ -1,0 +1,133 @@
+{% set title = "Denim - Overalls" %} {% set description = "Lightning denim site example" %}
+{% extends "layout.html" %} 
+    {% block header %}
+    <header class="overalls-header">
+        <div class="menu">
+            <div class="burger-cont">
+                <div class="burger">
+                    <span></span>
+                </div>
+            </div>
+            <ul class="catalog">
+                <li class="catalog__unit"><a class="catalog__link" href="./woman.html">Woman</a></li>
+                <li class="catalog__unit"><a class="catalog__link" href="./woman.html">Man</a></li>
+                <li class="catalog__unit"><a class="catalog__link" href="./woman.html">New</a></li>
+            </ul>
+            <a class="logo" href="./index.html">
+                Nimes
+            </a>
+            <ul class="purchases">
+                <li class="purchases__unit"><a class="purchases__link" href="#">
+                    <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M19 19L14.65 14.65M17 9C17 13.4183 13.4183 17 9 17C4.58172 17 1 13.4183 1 9C1 4.58172 4.58172 1 9 1C13.4183 1 17 4.58172 17 9Z" stroke="#151C22" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </a></li>
+                <li class="purchases__unit"><a class="purchases__link" href="#">
+                    <svg width="20" height="18" viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 1H4.63636L7.07273 12.4771C7.15586 12.8718 7.38355 13.2263 7.71595 13.4785C8.04835 13.7308 8.46427 13.8649 8.89091 13.8571H17.7273C18.1539 13.8649 18.5698 13.7308 18.9022 13.4785C19.2346 13.2263 19.4623 12.8718 19.5455 12.4771L21 5.28571H5.54545M9.18182 18.1429C9.18182 18.6162 8.7748 19 8.27273 19C7.77065 19 7.36364 18.6162 7.36364 18.1429C7.36364 17.6695 7.77065 17.2857 8.27273 17.2857C8.7748 17.2857 9.18182 17.6695 9.18182 18.1429ZM19.1818 18.1429C19.1818 18.6162 18.7748 19 18.2727 19C17.7707 19 17.3636 18.6162 17.3636 18.1429C17.3636 17.6695 17.7707 17.2857 18.2727 17.2857C18.7748 17.2857 19.1818 17.6695 19.1818 18.1429Z" stroke="#151C22" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </a></li>
+            </ul>
+        </div>
+    </header>
+    {% endblock %}
+    {% block content %}
+    <main class="overalls-main">
+        <div class="product">
+            <div class="photos">
+                <div class="left-arrow">
+                    <svg class="left-arrow__icon" width="13" height="23" viewBox="0 0 13 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 1L2 11.5L12 22" stroke="#151C22" stroke-width="2"/>
+                    </svg>
+                </div>
+                <div class="slider">
+                    <div class="slider-main-photo">
+                        <img src="./img/overalls1.jpg" alt="main photo" class="slider-main-photo__image">
+                    </div>
+                    <div class="slider-other-photos">
+                        <a href="#" class="slider-other-photos__unit" style="grid-area: o1;"><img src="./img/overalls2.jpg" alt="another photo" class="slider-other-photos__image"></a>
+                        <a href="#" class="slider-other-photos__unit" style="grid-area: o2;"><img src="./img/overalls3.jpg" alt="another photo" class="slider-other-photos__image"></a>
+                        <a href="#" class="slider-other-photos__unit" style="grid-area: o3;"><img src="./img/overalls4.jpg" alt="another photo" class="slider-other-photos__image"></a>
+                        <a href="#" class="slider-other-photos__unit" style="grid-area: o4;"><img src="./img/overalls5.jpg" alt="another photo" class="slider-other-photos__image"></a>
+                    </div>
+                </div>
+                <div class="right-arrow">
+                    <svg class="right-arrow__icon" width="13" height="23" viewBox="0 0 13 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 22L11 11.5L1 1" stroke="#151C22" stroke-width="2"/>
+                    </svg>    
+                </div>
+            </div>
+            <div class="characteristic">
+                <h2 class="characteristic__name">
+                    Overalls
+                </h2>
+                <p class="characteristic__caption">
+                    Overalls in washed organic cotton denim. Collar, button fly, and adjustable belt at waist. Chest pockets with flap. Long, gently flared sleeves and straight legs with front pockets and back pockets.
+                </p>
+                <div class="colors">
+                    <h3 class="colors__name">
+                        Color
+                    </h3>
+                    <div class="colors-set">
+                        <a href="#" class="colors-set__unit colors-set__unit_first"></a>
+                        <a href="#" class="colors-set__unit colors-set__unit_second"></a>
+                        <a href="#" class="colors-set__unit colors-set__unit_third"></a>
+                    </div>
+                </div>
+                <div class="sizes">
+                    <h3 class="sizes__name">
+                        Size
+                    </h3>
+                    <ul class="sizes-set">
+                        <li class="sizes-set__unit"><a href="#" class="sizes-set__link">XS</a></li>
+                        <li class="sizes-set__unit"><a href="#" class="sizes-set__link sizes-set__link_active">S</a></li>
+                        <li class="sizes-set__unit"><a href="#" class="sizes-set__link">M</a></li>
+                        <li class="sizes-set__unit"><a href="#" class="sizes-set__link">L</a></li>
+                        <li class="sizes-set__unit"><a href="#" class="sizes-set__link">XL</a></li>
+                    </ul>
+                </div>
+                <p class="characteristic__price">
+                    $ 160
+                </p>
+                <a class="characteristic__button">
+                    Add to cart
+                </a>
+            </div>
+        </div>
+        <div class="also-like">
+            <div class="also-like-title">
+                <h2 class="also-like-title__name">You may also like</h2>
+                <a href="./jackets.html" class="also-like-title__button">
+                    View all
+                </a>
+            </div>
+            <div class="also-like-variants">
+                <a href="./overalls.html" class="also-like-variants-unit" style="grid-area: o1;">
+                    <img src="./img/also-like1.jpg" alt="jacket" class="also-like-variants-unit__image">
+                    <p class="also-like-variants-unit__name">Overalls</p>
+                    <p class="also-like-variants-unit__price">$ 140</p>
+                </a>
+                <a href="./overalls.html" class="also-like-variants-unit" style="grid-area: o2;">
+                    <img src="./img/also-like2.jpg" alt="overalls" class="also-like-variants-unit__image">
+                    <p class="also-like-variants-unit__name">Overalls</p>
+                    <p class="also-like-variants-unit__price">$ 110</p>
+                </a>
+                <a href="./overalls.html" class="also-like-variants-unit" style="grid-area: j1;">
+                    <img src="./img/also-like3.jpg" alt="jacket" class="also-like-variants-unit__image">
+                    <p class="also-like-variants-unit__name">Jacket</p>
+                    <p class="also-like-variants-unit__price">$ 70</p>
+                </a>
+                <a href="./overalls.html" class="also-like-variants-unit" style="grid-area: j2;">
+                    <img src="./img/also-like4.jpg" alt="overalls" class="also-like-variants-unit__image">
+                    <p class="also-like-variants-unit__name">Jacket</p>
+                    <p class="also-like-variants-unit__price">$ 60</p>
+                </a>
+            </div>
+            <p class="also-like-add">
+                <a href="./jackets.html" class="also-like-add__button">
+                    View all
+                </a>
+            </p>
+        </div>
+    </main>
+    {% endblock %}

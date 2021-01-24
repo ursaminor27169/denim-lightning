@@ -1,0 +1,384 @@
+{% set title = "Denim - Jackets" %} {% set description = "Lightning denim site example" %}
+{% extends "layout.html" %} 
+    {% block header %}
+    <header class="jackets-header">
+        <div class="menu">
+            <div class="burger-cont">
+                <div class="burger">
+                    <span></span>
+                </div>
+            </div>
+            <ul class="catalog">
+                <li class="catalog__unit"><a class="catalog__link" href="./woman.html">Woman</a></li>
+                <li class="catalog__unit"><a class="catalog__link" href="./woman.html">Man</a></li>
+                <li class="catalog__unit"><a class="catalog__link" href="./woman.html">New</a></li>
+            </ul>
+            <a class="logo" href="./index.html">
+                Nimes
+            </a>
+            <ul class="purchases">
+                <li class="purchases__unit"><a class="purchases__link" href="#">
+                    <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M19 19L14.65 14.65M17 9C17 13.4183 13.4183 17 9 17C4.58172 17 1 13.4183 1 9C1 4.58172 4.58172 1 9 1C13.4183 1 17 4.58172 17 9Z" stroke="#151C22" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </a></li>
+                <li class="purchases__unit"><a class="purchases__link" href="#">
+                    <svg width="20" height="18" viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 1H4.63636L7.07273 12.4771C7.15586 12.8718 7.38355 13.2263 7.71595 13.4785C8.04835 13.7308 8.46427 13.8649 8.89091 13.8571H17.7273C18.1539 13.8649 18.5698 13.7308 18.9022 13.4785C19.2346 13.2263 19.4623 12.8718 19.5455 12.4771L21 5.28571H5.54545M9.18182 18.1429C9.18182 18.6162 8.7748 19 8.27273 19C7.77065 19 7.36364 18.6162 7.36364 18.1429C7.36364 17.6695 7.77065 17.2857 8.27273 17.2857C8.7748 17.2857 9.18182 17.6695 9.18182 18.1429ZM19.1818 18.1429C19.1818 18.6162 18.7748 19 18.2727 19C17.7707 19 17.3636 18.6162 17.3636 18.1429C17.3636 17.6695 17.7707 17.2857 18.2727 17.2857C18.7748 17.2857 19.1818 17.6695 19.1818 18.1429Z" stroke="#151C22" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </a></li>
+            </ul>
+        </div>
+        <div class="main">
+            <div class="title">
+                <ul class="bread-crumb">
+                    <li class="bread-crumb__unit bread-crumb__unit_delete"><a href="./index.html" class="bread-crumb__link">All categories</a></li>
+                    <li class="bread-crumb__unit bread-crumb__unit_delete">/</li>
+                    <li class="bread-crumb__unit"><a href="./woman.html" class="bread-crumb__link">Woman</a></li>
+                    <li class="bread-crumb__unit">/</li>
+                    <li class="bread-crumb__unit"><a href="#" class="bread-crumb__link bread-crumb__link_active">Jackets</a></li>
+                </ul>
+                <div class="title__name">Denim Collection</div>
+                <div class="title__name">Fall 2019</div>
+            </div>
+            <div class="philosophy">
+                <img src="./img/philosophy.jpg" alt="надпись we see what we want" class="philosophy__image">
+            </div>
+        </div>
+    </header>
+    {% endblock %}
+    {% block content %}
+    <main class="jackets-main">
+        <div class="filter-container">
+            <div class="filter">
+                <p class="filter__name">Filter by</p>
+                <svg class="filter__tick" width="18" height="11" viewBox="0 0 18 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 1L9 9L17 1" stroke="#151C22" stroke-width="2"/>
+                </svg>                    
+            </div>
+            <div class="filter-cont">
+                <ul class="filter-nav">
+                    <li class="filter-nav__unit filter-nav__unit_clear-all"><a href="#" class="filter-nav__link filter-nav__link_clear-all">Clear all</a></li>
+                    <li class="filter-nav__unit filter-nav__unit_name">Filter</li>
+                    <li class="filter-nav__unit filter-nav__unit_close"><a href="#" class="filter-nav__link filter-nav__link_close">Close</a></li>
+                </ul>
+                <div class="filter-characteristics filter-characteristics-price">
+                    <div class="filter-characteristics-cont filter-characteristics-price-cont">
+                        <h3 class="filter-characteristics-cont__name">Price</h3>
+                        <svg class="filter-characteristics-price__tick" width="18" height="11" viewBox="0 0 18 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 1L9 9L17 1" stroke="#151C22" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <div class="price-inside price-none">
+                        <p class="filter-characteristics-price__description">From</p>
+                        <input class="filter-characteristics-price__range filter-characteristics-price__range_from" type="range" min="0" max="160" step="1" value="40">
+                        <p class="filter-characteristics-price__price">$ <span class="filter-characteristics-price__price_number-from">40</span></p>
+                        <p class="filter-characteristics-price__description">After</p>
+                        <input class="filter-characteristics-price__range filter-characteristics-price__range_to" type="range" min="35" max="250" step="1" value="240">
+                        <p class="filter-characteristics-price__price">$ <span class="filter-characteristics-price__price_number-to">240</span></p>
+                    </div>
+                </div>
+                <div class="filter-characteristics filter-characteristics-color">
+                    <div class="filter-characteristics-cont filter-characteristics-color-cont">
+                        <h3 class="filter-characteristics-cont__name">Color</h3>
+                        <svg class="filter-characteristics-color__tick" width="18" height="11" viewBox="0 0 18 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 1L9 9L17 1" stroke="#151C22" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <div class="filter-characteristics-color-set color-none">
+                        <div class="filter-characteristics-color-set__unit filter-characteristics-color-set__unit_first"></div>
+                        <div class="filter-characteristics-color-set__unit filter-characteristics-color-set__unit_second"></div>
+                        <div class="filter-characteristics-color-set__unit filter-characteristics-color-set__unit_third"></div>
+                        <div class="filter-characteristics-color-set__unit filter-characteristics-color-set__unit_fourth"></div>
+                        <div class="filter-characteristics-color-set__unit filter-characteristics-color-set__unit_fifth"></div>
+                        <div class="filter-characteristics-color-set__unit filter-characteristics-color-set__unit_sixth"></div>
+                    </div>
+                </div>
+                <div class="filter-characteristics filter-characteristics-collection">
+                    <div class="filter-characteristics-cont filter-characteristics-collection-cont">
+                        <h3 class="filter-characteristics-cont__name">Collection</h3>
+                        <svg class="filter-characteristics-collection__tick" width="18" height="11" viewBox="0 0 18 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 1L9 9L17 1" stroke="#151C22" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <ul class="filter-characteristics-collection-set collection-none">
+                        <li class="filter-characteristics-collection-set__unit filter-characteristics-collection-set__unit_casual"><a href="#" class="filter-characteristics-collection-set__link filter-characteristics-collection-set__link_casual">Casual</a></li>
+                        <li class="filter-characteristics-collection-set__unit filter-characteristics-collection-set__unit_petite"><a href="#" class="filter-characteristics-collection-set__link filter-characteristics-collection-set__link_petite">Petite</a></li>
+                        <li class="filter-characteristics-collection-set__unit filter-characteristics-collection-set__unit_classic filter-characteristics-collection-set__unit_active"><a href="#" class="filter-characteristics-collection-set__link filter-characteristics-collection-set__link_active filter-characteristics-collection-set__link_classic">Classic</a></li>
+                        <li class="filter-characteristics-collection-set__unit filter-characteristics-collection-set__unit_soulluxe"><a href="#" class="filter-characteristics-collection-set__link filter-characteristics-collection-set__link_soulluxe">Soulluxe</a></li>
+                    </ul>
+                </div>
+                <a href="#" class="filter__button">
+                    Apply
+                </a>
+                <p class="filter__button-more768px">
+                    <a href="#" class="filter__button-more768px_link">
+                        Clear all
+                    </a>
+                </p>
+            </div>
+        </div>
+        <div class="assortments">
+            <a href="./overalls.html" class="assortments-unit" style="grid-area: j1" data-color="sixth" data-collection="casual">
+                <img src="./img/assortment1.jpg" alt="girl in jeans" class="assortments-unit__image">
+                <p class="assortments-unit__name">Jacket</p>
+                <p class="assortments-unit__price">$ <span class="assortments-unit__price_number">40</span></p>
+            </a>
+            <a href="./overalls.html" class="assortments-unit" style="grid-area: j2" data-color="third" data-collection="casual">
+                <img src="./img/assortment2.jpg" alt="girl in jeans" class="assortments-unit__image">
+                <p class="assortments-unit__name">Jacket</p>
+                <p class="assortments-unit__price">$ <span class="assortments-unit__price_number">70</span></p>
+            </a>
+            <a href="./overalls.html" class="assortments-unit" style="grid-area: j3" data-color="first" data-collection="casual">
+                <img src="./img/assortment3.jpg" alt="girl in jeans" class="assortments-unit__image">
+                <p class="assortments-unit__name">Jacket</p>
+                <p class="assortments-unit__price">$ <span class="assortments-unit__price_number">60</span></p>
+            </a>
+            <a href="./overalls.html" class="assortments-unit assortments-unit_left" style="grid-area: j4" data-color="first" data-collection="petite">
+                <img src="./img/assortment4.jpg" alt="girl in jeans" class="assortments-unit__image">
+                <p class="assortments-unit__name">Jacket</p>
+                <p class="assortments-unit__price">$ <span class="assortments-unit__price_number">50</span></p>
+            </a>
+            <a href="./overalls.html" class="assortments-unit assortments-unit_left assortments-unit_left_second" style="grid-area: j5" data-color="first" data-collection="petite">
+                <img src="./img/assortment5.jpg" alt="girl in jeans" class="assortments-unit__image assortments-unit__image_long-girl">
+                <p class="assortments-unit__name">Jacket</p>
+                <p class="assortments-unit__price">$ <span class="assortments-unit__price_number">40</span></p>
+            </a>
+            <a href="./overalls.html" class="assortments-unit" style="grid-area: j6" data-color="fifth" data-collection="petite">
+                <img src="./img/assortment6.jpg" alt="girl in jeans" class="assortments-unit__image">
+                <p class="assortments-unit__name">Jacket</p>
+                <p class="assortments-unit__price">$ <span class="assortments-unit__price_number">110</span></p>
+            </a>
+            <a href="./overalls.html" class="assortments-unit" style="grid-area: j7" data-color="sixth" data-collection="soulluxe">
+                <img src="./img/assortment7.jpg" alt="girl in jeans" class="assortments-unit__image">
+                <p class="assortments-unit__name">Jacket</p>
+                <p class="assortments-unit__price">$ <span class="assortments-unit__price_number">35</span></p>
+            </a>
+            <a href="./overalls.html" class="assortments-unit" style="grid-area: j8"  data-color="fifth" data-collection="soulluxe">
+                <img src="./img/assortment8.jpg" alt="girl in jeans" class="assortments-unit__image">
+                <p class="assortments-unit__name">Jacket</p>
+                <p class="assortments-unit__price">$ <span class="assortments-unit__price_number">85</span></p>
+            </a>
+            <a href="./overalls.html" class="assortments-unit" style="grid-area: jb" data-color="second" data-collection="soulluxe">
+                <img src="./img/assortments9-768.jpg" alt="girl in jeans" class="assortments-unit__image assortments-unit__image_to900px">
+                <img src="./img/assortments9-900.jpg" alt="girl in jeans" class="assortments-unit__image assortments-unit__image_to1100px">
+                <img src="./img/assortment9.jpg" alt="girl in jeans" class="assortments-unit__image assortments-unit__image_from1100px">
+                <p class="assortments-unit__name">Jacket</p>
+                <p class="assortments-unit__price">$ <span class="assortments-unit__price_number">160</span></p>
+            </a>
+        </div>
+        <div class="assortments assortments-one assortments-none">
+            <a href="./overalls.html" class="assortments-unit" style="grid-area: j1" data-color="sixth" data-collection="casual">
+                <img src="./img/assortment1.jpg" alt="girl in jeans" class="assortments-unit__image">
+                <p class="assortments-unit__name">Jacket</p>
+                <p class="assortments-unit__price">$ <span class="assortments-unit__price_number">40</span></p>
+            </a>
+            <a href="./overalls.html" class="assortments-unit" style="grid-area: j2" data-color="third" data-collection="casual">
+                <img src="./img/assortment2.jpg" alt="girl in jeans" class="assortments-unit__image">
+                <p class="assortments-unit__name">Jacket</p>
+                <p class="assortments-unit__price">$ <span class="assortments-unit__price_number">70</span></p>
+            </a>
+            <a href="./overalls.html" class="assortments-unit" style="grid-area: j3" data-color="first" data-collection="casual">
+                <img src="./img/assortment3.jpg" alt="girl in jeans" class="assortments-unit__image">
+                <p class="assortments-unit__name">Jacket</p>
+                <p class="assortments-unit__price">$ <span class="assortments-unit__price_number">60</span></p>
+            </a>
+            <a href="./overalls.html" class="assortments-unit assortments-unit_left" style="grid-area: j4" data-color="first" data-collection="petite">
+                <img src="./img/assortment4.jpg" alt="girl in jeans" class="assortments-unit__image">
+                <p class="assortments-unit__name">Jacket</p>
+                <p class="assortments-unit__price">$ <span class="assortments-unit__price_number">50</span></p>
+            </a>
+            <a href="./overalls.html" class="assortments-unit assortments-unit_left assortments-unit_left_second" style="grid-area: j5" data-color="first" data-collection="petite">
+                <img src="./img/assortment5.jpg" alt="girl in jeans" class="assortments-unit__image assortments-unit__image_long-girl">
+                <p class="assortments-unit__name">Jacket</p>
+                <p class="assortments-unit__price">$ <span class="assortments-unit__price_number">40</span></p>
+            </a>
+            <a href="./overalls.html" class="assortments-unit" style="grid-area: j6" data-color="fifth" data-collection="petite">
+                <img src="./img/assortment6.jpg" alt="girl in jeans" class="assortments-unit__image">
+                <p class="assortments-unit__name">Jacket</p>
+                <p class="assortments-unit__price">$ <span class="assortments-unit__price_number">110</span></p>
+            </a>
+            <a href="./overalls.html" class="assortments-unit" style="grid-area: j7" data-color="sixth" data-collection="soulluxe">
+                <img src="./img/assortment7.jpg" alt="girl in jeans" class="assortments-unit__image">
+                <p class="assortments-unit__name">Jacket</p>
+                <p class="assortments-unit__price">$ <span class="assortments-unit__price_number">35</span></p>
+            </a>
+            <a href="./overalls.html" class="assortments-unit" style="grid-area: j8"  data-color="fifth" data-collection="soulluxe">
+                <img src="./img/assortment8.jpg" alt="girl in jeans" class="assortments-unit__image">
+                <p class="assortments-unit__name">Jacket</p>
+                <p class="assortments-unit__price">$ <span class="assortments-unit__price_number">85</span></p>
+            </a>
+            <a href="./overalls.html" class="assortments-unit" style="grid-area: jb" data-color="second" data-collection="soulluxe">
+                <img src="./img/assortments9-768.jpg" alt="girl in jeans" class="assortments-unit__image assortments-unit__image_to900px">
+                <img src="./img/assortments9-900.jpg" alt="girl in jeans" class="assortments-unit__image assortments-unit__image_to1100px">
+                <img src="./img/assortment9.jpg" alt="girl in jeans" class="assortments-unit__image assortments-unit__image_from1100px">
+                <p class="assortments-unit__name">Jacket</p>
+                <p class="assortments-unit__price">$ <span class="assortments-unit__price_number">160</span></p>
+            </a>
+        </div>
+        <div class="assortments assortments-two  assortments-none">
+            <a href="./overalls.html" class="assortments-unit" style="grid-area: j1" data-color="sixth" data-collection="casual">
+                <img src="./img/assortment1.jpg" alt="girl in jeans" class="assortments-unit__image">
+                <p class="assortments-unit__name">Jacket</p>
+                <p class="assortments-unit__price">$ <span class="assortments-unit__price_number">40</span></p>
+            </a>
+            <a href="./overalls.html" class="assortments-unit" style="grid-area: j2" data-color="third" data-collection="casual">
+                <img src="./img/assortment2.jpg" alt="girl in jeans" class="assortments-unit__image">
+                <p class="assortments-unit__name">Jacket</p>
+                <p class="assortments-unit__price">$ <span class="assortments-unit__price_number">70</span></p>
+            </a>
+            <a href="./overalls.html" class="assortments-unit" style="grid-area: j3" data-color="first" data-collection="casual">
+                <img src="./img/assortment3.jpg" alt="girl in jeans" class="assortments-unit__image">
+                <p class="assortments-unit__name">Jacket</p>
+                <p class="assortments-unit__price">$ <span class="assortments-unit__price_number">60</span></p>
+            </a>
+            <a href="./overalls.html" class="assortments-unit assortments-unit_left" style="grid-area: j4" data-color="first" data-collection="petite">
+                <img src="./img/assortment4.jpg" alt="girl in jeans" class="assortments-unit__image">
+                <p class="assortments-unit__name">Jacket</p>
+                <p class="assortments-unit__price">$ <span class="assortments-unit__price_number">50</span></p>
+            </a>
+            <a href="./overalls.html" class="assortments-unit assortments-unit_left assortments-unit_left_second" style="grid-area: j5" data-color="first" data-collection="petite">
+                <img src="./img/assortment5.jpg" alt="girl in jeans" class="assortments-unit__image assortments-unit__image_long-girl">
+                <p class="assortments-unit__name">Jacket</p>
+                <p class="assortments-unit__price">$ <span class="assortments-unit__price_number">40</span></p>
+            </a>
+            <a href="./overalls.html" class="assortments-unit" style="grid-area: j6" data-color="fifth" data-collection="petite">
+                <img src="./img/assortment6.jpg" alt="girl in jeans" class="assortments-unit__image">
+                <p class="assortments-unit__name">Jacket</p>
+                <p class="assortments-unit__price">$ <span class="assortments-unit__price_number">110</span></p>
+            </a>
+            <a href="./overalls.html" class="assortments-unit" style="grid-area: j7" data-color="sixth" data-collection="soulluxe">
+                <img src="./img/assortment7.jpg" alt="girl in jeans" class="assortments-unit__image">
+                <p class="assortments-unit__name">Jacket</p>
+                <p class="assortments-unit__price">$ <span class="assortments-unit__price_number">35</span></p>
+            </a>
+            <a href="./overalls.html" class="assortments-unit" style="grid-area: j8"  data-color="fifth" data-collection="soulluxe">
+                <img src="./img/assortment8.jpg" alt="girl in jeans" class="assortments-unit__image">
+                <p class="assortments-unit__name">Jacket</p>
+                <p class="assortments-unit__price">$ <span class="assortments-unit__price_number">85</span></p>
+            </a>
+            <a href="./overalls.html" class="assortments-unit" style="grid-area: jb" data-color="second" data-collection="soulluxe">
+                <img src="./img/assortments9-768.jpg" alt="girl in jeans" class="assortments-unit__image assortments-unit__image_to900px">
+                <img src="./img/assortments9-900.jpg" alt="girl in jeans" class="assortments-unit__image assortments-unit__image_to1100px">
+                <img src="./img/assortment9.jpg" alt="girl in jeans" class="assortments-unit__image assortments-unit__image_from1100px">
+                <p class="assortments-unit__name">Jacket</p>
+                <p class="assortments-unit__price">$ <span class="assortments-unit__price_number">160</span></p>
+            </a>
+        </div>
+        <div class="assortments assortments-three assortments-none">
+            <a href="./overalls.html" class="assortments-unit" style="grid-area: j1" data-color="sixth" data-collection="casual">
+                <img src="./img/assortment1.jpg" alt="girl in jeans" class="assortments-unit__image">
+                <p class="assortments-unit__name">Jacket</p>
+                <p class="assortments-unit__price">$ <span class="assortments-unit__price_number">40</span></p>
+            </a>
+            <a href="./overalls.html" class="assortments-unit" style="grid-area: j2" data-color="third" data-collection="casual">
+                <img src="./img/assortment2.jpg" alt="girl in jeans" class="assortments-unit__image">
+                <p class="assortments-unit__name">Jacket</p>
+                <p class="assortments-unit__price">$ <span class="assortments-unit__price_number">70</span></p>
+            </a>
+            <a href="./overalls.html" class="assortments-unit" style="grid-area: j3" data-color="first" data-collection="casual">
+                <img src="./img/assortment3.jpg" alt="girl in jeans" class="assortments-unit__image">
+                <p class="assortments-unit__name">Jacket</p>
+                <p class="assortments-unit__price">$ <span class="assortments-unit__price_number">60</span></p>
+            </a>
+            <a href="./overalls.html" class="assortments-unit assortments-unit_left" style="grid-area: j4" data-color="first" data-collection="petite">
+                <img src="./img/assortment4.jpg" alt="girl in jeans" class="assortments-unit__image">
+                <p class="assortments-unit__name">Jacket</p>
+                <p class="assortments-unit__price">$ <span class="assortments-unit__price_number">50</span></p>
+            </a>
+            <a href="./overalls.html" class="assortments-unit assortments-unit_left assortments-unit_left_second" style="grid-area: j5" data-color="first" data-collection="petite">
+                <img src="./img/assortment5.jpg" alt="girl in jeans" class="assortments-unit__image assortments-unit__image_long-girl">
+                <p class="assortments-unit__name">Jacket</p>
+                <p class="assortments-unit__price">$ <span class="assortments-unit__price_number">40</span></p>
+            </a>
+            <a href="./overalls.html" class="assortments-unit" style="grid-area: j6" data-color="fifth" data-collection="petite">
+                <img src="./img/assortment6.jpg" alt="girl in jeans" class="assortments-unit__image">
+                <p class="assortments-unit__name">Jacket</p>
+                <p class="assortments-unit__price">$ <span class="assortments-unit__price_number">110</span></p>
+            </a>
+            <a href="./overalls.html" class="assortments-unit" style="grid-area: j7" data-color="sixth" data-collection="soulluxe">
+                <img src="./img/assortment7.jpg" alt="girl in jeans" class="assortments-unit__image">
+                <p class="assortments-unit__name">Jacket</p>
+                <p class="assortments-unit__price">$ <span class="assortments-unit__price_number">35</span></p>
+            </a>
+            <a href="./overalls.html" class="assortments-unit" style="grid-area: j8"  data-color="fifth" data-collection="soulluxe">
+                <img src="./img/assortment8.jpg" alt="girl in jeans" class="assortments-unit__image">
+                <p class="assortments-unit__name">Jacket</p>
+                <p class="assortments-unit__price">$ <span class="assortments-unit__price_number">85</span></p>
+            </a>
+            <a href="./overalls.html" class="assortments-unit" style="grid-area: jb" data-color="second" data-collection="soulluxe">
+                <img src="./img/assortments9-768.jpg" alt="girl in jeans" class="assortments-unit__image assortments-unit__image_to900px">
+                <img src="./img/assortments9-900.jpg" alt="girl in jeans" class="assortments-unit__image assortments-unit__image_to1100px">
+                <img src="./img/assortment9.jpg" alt="girl in jeans" class="assortments-unit__image assortments-unit__image_from1100px">
+                <p class="assortments-unit__name">Jacket</p>
+                <p class="assortments-unit__price">$ <span class="assortments-unit__price_number">160</span></p>
+            </a>
+        </div>
+        <div class="assortments assortments-four assortments-none">
+            <a href="./overalls.html" class="assortments-unit" style="grid-area: j1" data-color="sixth" data-collection="casual">
+                <img src="./img/assortment1.jpg" alt="girl in jeans" class="assortments-unit__image">
+                <p class="assortments-unit__name">Jacket</p>
+                <p class="assortments-unit__price">$ <span class="assortments-unit__price_number">40</span></p>
+            </a>
+            <a href="./overalls.html" class="assortments-unit" style="grid-area: j2" data-color="third" data-collection="casual">
+                <img src="./img/assortment2.jpg" alt="girl in jeans" class="assortments-unit__image">
+                <p class="assortments-unit__name">Jacket</p>
+                <p class="assortments-unit__price">$ <span class="assortments-unit__price_number">70</span></p>
+            </a>
+            <a href="./overalls.html" class="assortments-unit" style="grid-area: j3" data-color="first" data-collection="casual">
+                <img src="./img/assortment3.jpg" alt="girl in jeans" class="assortments-unit__image">
+                <p class="assortments-unit__name">Jacket</p>
+                <p class="assortments-unit__price">$ <span class="assortments-unit__price_number">60</span></p>
+            </a>
+            <a href="./overalls.html" class="assortments-unit assortments-unit_left" style="grid-area: j4" data-color="first" data-collection="petite">
+                <img src="./img/assortment4.jpg" alt="girl in jeans" class="assortments-unit__image">
+                <p class="assortments-unit__name">Jacket</p>
+                <p class="assortments-unit__price">$ <span class="assortments-unit__price_number">50</span></p>
+            </a>
+            <a href="./overalls.html" class="assortments-unit assortments-unit_left assortments-unit_left_second" style="grid-area: j5" data-color="first" data-collection="petite">
+                <img src="./img/assortment5.jpg" alt="girl in jeans" class="assortments-unit__image assortments-unit__image_long-girl">
+                <p class="assortments-unit__name">Jacket</p>
+                <p class="assortments-unit__price">$ <span class="assortments-unit__price_number">40</span></p>
+            </a>
+            <a href="./overalls.html" class="assortments-unit" style="grid-area: j6" data-color="fifth" data-collection="petite">
+                <img src="./img/assortment6.jpg" alt="girl in jeans" class="assortments-unit__image">
+                <p class="assortments-unit__name">Jacket</p>
+                <p class="assortments-unit__price">$ <span class="assortments-unit__price_number">110</span></p>
+            </a>
+            <a href="./overalls.html" class="assortments-unit" style="grid-area: j7" data-color="sixth" data-collection="soulluxe">
+                <img src="./img/assortment7.jpg" alt="girl in jeans" class="assortments-unit__image">
+                <p class="assortments-unit__name">Jacket</p>
+                <p class="assortments-unit__price">$ <span class="assortments-unit__price_number">35</span></p>
+            </a>
+            <a href="./overalls.html" class="assortments-unit" style="grid-area: j8"  data-color="fifth" data-collection="soulluxe">
+                <img src="./img/assortment8.jpg" alt="girl in jeans" class="assortments-unit__image">
+                <p class="assortments-unit__name">Jacket</p>
+                <p class="assortments-unit__price">$ <span class="assortments-unit__price_number">85</span></p>
+            </a>
+            <a href="./overalls.html" class="assortments-unit" style="grid-area: jb" data-color="second" data-collection="soulluxe">
+                <img src="./img/assortments9-768.jpg" alt="girl in jeans" class="assortments-unit__image assortments-unit__image_to900px">
+                <img src="./img/assortments9-900.jpg" alt="girl in jeans" class="assortments-unit__image assortments-unit__image_to1100px">
+                <img src="./img/assortment9.jpg" alt="girl in jeans" class="assortments-unit__image assortments-unit__image_from1100px">
+                <p class="assortments-unit__name">Jacket</p>
+                <p class="assortments-unit__price">$ <span class="assortments-unit__price_number">160</span></p>
+            </a>
+        </div>
+        <div class="no-products">
+            <h1>
+                No appropriate products
+            </h1>
+        </div>
+        <div class="load-more">
+            <p class="load-more__name">
+                Showing <span class="load-more__name_number">9</span> of 45 items
+                <div class="load-more__name_line"></div>
+            </p>
+            <a href="./jackets.html" class="load-more__button" id="load-more__id">
+                Load more
+            </a>
+        </div>
+    </main>
+    {% endblock %}
+    {% block scripts %}
+        <script src="index.js"></script>    
+    {% endblock %}
