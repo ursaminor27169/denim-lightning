@@ -1,5 +1,5 @@
-import filter from './filter'
-import burger from './burger'
+import { filter } from './filter'
+import { burger } from './burger'
 
 filter()
 burger()
